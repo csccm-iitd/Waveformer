@@ -152,31 +152,7 @@ class WNO1dtransformer(nn.Module):
         x = x1 + x2
         # x = F.gelu(x)
 
-        # x1 = self.conv1(x,y)
-        # x2 = self.w1(x,y)
-        # x = x1 + x2
-        # x = F.gelu(x)
-
-        # x1 = self.conv2(x)
-        # x2 = self.w2(x)
-        # x = x1 + x2
-        # x = F.gelu(x)
-        
-        # x1 = self.conv3(x)
-        # x2 = self.w3(x)
-        # x = x1 + x2
-        # x = F.gelu(x)
-        
-        # x1 = self.conv4(x)
-        # x2 = self.w4(x)
-        # x = x1 + x2
-        # x = F.gelu(x)
-        
-
-        # x1 = self.conv5(x,y)
-        # x2 = self.w5(x)
-        # x = x1 + x2
-
+       
         # x = x[..., :-self.padding, :-self.padding] # remove padding, when required
         x = x.permute(0, 2, 1)
         x = self.fc1(x)
